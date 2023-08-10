@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{{- $headers := findRE "&lt;h[1-6].*?&gt;(.|\n])+?&lt;/h[1-6]&gt;" .Content -}}</span></p>
+<p class="p1"><span class="s1">{{- $has_headers := ge (len $headers) 1 -}}</span></p>
+<p class="p1"><span class="s1">{{- if $has_headers -}}</span></p>
+<p class="p1"><span class="s1">&lt;aside id="toc-container" class="toc-container wide"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="toc"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;details {{if (.Param "TocOpen") }} open{{ end }}&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;summary accesskey="c" title="(Alt + C)"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="details"&gt;{{- i18n "toc" | default "Table of Contents" }}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/summary&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $largest := 6 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- range $headers -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $headerLevel := len (seq $headerLevel) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- if lt $headerLevel $largest -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $largest = $headerLevel -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- $.Scratch.Set "bareul" slice -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- range seq (sub $firstHeaderLevel $largest) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $.Scratch.Add "bareul" (sub (add $largest .) 1) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- range $i, $header := $headers -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $headerLevel := index (findRE "[1-6]" . 1) 0 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $headerLevel := len (seq $headerLevel) -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{/* get id="xyz" */}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $id := index (findRE "(id=\"(.*?)\")" $header 9) 0 }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- /* strip id="" to leave xyz, no way to get regex capturing groups in hugo */ -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $cleanedID := replace (replace $id "id=\"" "") "\"" "" }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $header := replaceRE "&lt;h[1-6].*?&gt;((.|\n])+?)&lt;/h[1-6]&gt;" "$1" $header -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- if ne $i 0 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $prevHeaderLevel := index (findRE "[1-6]" (index $headers (sub $i 1)) 1) 0 -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $prevHeaderLevel := len (seq $prevHeaderLevel) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- if gt $headerLevel $prevHeaderLevel -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- range seq $prevHeaderLevel (sub $headerLevel 1) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{/* the first should not be recorded */}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- if ne $prevHeaderLevel . -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- $.Scratch.Add "bareul" . -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- else -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- if lt $headerLevel $prevHeaderLevel -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- range seq (sub $prevHeaderLevel 1) -1 $headerLevel -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>{{- if in ($.Scratch.Get "bareul") . -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{/* manually do pop item */}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $tmp := $.Scratch.Get "bareul" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $.Scratch.Delete "bareul" -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $.Scratch.Set "bareul" slice}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- range seq (sub (len $tmp) 1) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $.Scratch.Add "bareul" (index $tmp (sub . 1)) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- else -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}"&gt;{{- $header | safeHTML -}}&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;a href="#{{- $cleanedID -}}" aria-label="{{- $header | plainify -}}"&gt;{{- $header | safeHTML -}}&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- {{- $firstHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers 0) 1) 0)) -}} --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $firstHeaderLevel := $largest }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>{{- $lastHeaderLevel := len (seq (index (findRE "[1-6]" (index $headers (sub (len $headers) 1)) 1) 0)) }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- range seq (sub $lastHeaderLevel $firstHeaderLevel) -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{{- if in ($.Scratch.Get "bareul") (add . $firstHeaderLevel) }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- else }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end -}}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{- end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/details&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/aside&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let activeElement;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let elements;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addEventListener('DOMContentLoaded', function (event) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>checkTocPosition();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>// Make the first header active</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>activeElement = elements[0];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>}, false);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addEventListener('resize', function(event) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>checkTocPosition();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}, false);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addEventListener('scroll', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Check if there is an object in the top half of the screen or keep the last item active</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>activeElement = Array.from(elements).find((element) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if ((getOffsetTop(element) - window.pageYOffset) &gt; 0 &amp;&amp;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>(getOffsetTop(element) - window.pageYOffset) &lt; window.innerHeight/2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return element;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}) || activeElement</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>elements.forEach(element =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>const id = encodeURI(element.getAttribute('id')).toLowerCase();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>if (element === activeElement){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>}, false);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function checkTocPosition() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const width = document.body.scrollWidth;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (width - main - (toc * 2) - (gap * 4) &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("toc-container").classList.add("wide");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("toc-container").classList.remove("wide");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function getOffsetTop(element) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (!element.getClientRects().length) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let rect = element.getBoundingClientRect();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let win = element.ownerDocument.defaultView;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return rect.top + win.pageYOffset;<span class="Apple-converted-space">   </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">{{- end }}</span></p>
+</body>
+</html>
