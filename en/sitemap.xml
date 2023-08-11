@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnsblog.github.io/en/posts/blog/%E5%90%8E%E7%9C%9F%E7%9B%B8/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/posts/blog/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/tags/life/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/tags/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/posts/</loc>
+    <lastmod>2022-08-11T00:23:15+08:00</lastmod>
+  </url><url>
     <loc>https://johnsblog.github.io/en/tags/blog/</loc>
     <lastmod>2022-05-05T00:18:23+08:00</lastmod>
   </url><url>
     <loc>https://johnsblog.github.io/en/posts/blog/0811/</loc>
     <lastmod>2022-05-05T00:18:23+08:00</lastmod>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/posts/blog/</loc>
-    <lastmod>2022-05-05T00:18:23+08:00</lastmod>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/</loc>
-    <lastmod>2022-05-05T00:18:23+08:00</lastmod>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/tags/</loc>
-    <lastmod>2022-05-05T00:18:23+08:00</lastmod>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/posts/</loc>
-    <lastmod>2022-05-05T00:18:23+08:00</lastmod>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/tags/life/</loc>
-    <lastmod>2022-05-05T00:18:15+08:00</lastmod>
   </url><url>
     <loc>https://johnsblog.github.io/en/posts/life/life/</loc>
     <lastmod>2022-05-05T00:18:15+08:00</lastmod>
