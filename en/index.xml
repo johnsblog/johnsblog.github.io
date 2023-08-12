@@ -58,7 +58,7 @@
       <pubDate>Sat, 06 Nov 2021 14:57:28 +0800</pubDate>
       
       <guid>https://johnsblog.github.io/en/about/</guid>
-      <description>class Me: def __init__(self): self.name = &amp;#34;John Young&amp;#34; self.prefer_name = &amp;#34;Die&amp;#34; self.born_year = 2001 self.hometown = &amp;#34;Guizhou&amp;#34; self.curr_location = &amp;#34;NJC&amp;#34; self.undergrad_school = &amp;#34;SBS&amp;#34;</description>
+      <description>class Me: def __init__(self): self.name = &amp;#34;John Young&amp;#34; self.born_year = 2001</description>
     </item>
     
     
