@@ -254,26 +254,96 @@
     <span>Read</span>
   </a>
 </nav>
-
-  </footer>
-
-  </head>
-  <body>
-    
-    <div id="waline"></div>
-    <script type="module">
-      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+  </script>
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+<div id="waline"></div>
+<script>
+  new Waline({
+    el: '#waline',
+    serverURL: 'https://john-omega.vercel.app/',
+    copyright: false,
+    login: 'enable',
+    placeholder: '输入昵称 邮箱即可评论，QQ邮箱可以自动获取头像',
+    dark: 'auto',
+	  requiredMeta: ['nick', 'mail'],
+  });
+  </script>
   
-      init({
-        el: '#waline',
-        serverURL: 'https://john-omega.vercel.app'
-        copyright: false,
-        placeholder: '输入昵称 邮箱即可评论，QQ邮箱可以自动获取头像',
-        dark: 'auto',
-	      requiredMeta: ['nick', 'mail'],
-      });
-    </script>
-  </body>
+  <style>
+  .waline-container {
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    padding: 2%;
+  }
+  .waline-container .vcount {
+    color: var(--card-text-color-main);
+  }
+  .v[data-class=v] .vcard {
+    flex: 1;
+    width: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1;  
+}
+@media (max-width: 580px){
+.v[data-class=v] .vheader .vheader-item:not(:last-child) {
+    border-bottom: 1px solid rgba(76, 153, 246, 0.8);    
+}}
+   
+  :root {
+    --waline-theme-color: #258df6;  
+    --waline-active-color: #246BB1;  
+     
+    --waline-badge-color: #34495e;  
+    --waline-avatar-radius: 5px;
+    --waline-avatar-size: 5rem;
+    --waline-dark-grey: #58a5f2;  
+    --waline-text-color: #0c7dd3;  
+    --waline-font-size: 1.2rem;  
+  }
+
+   
+  :root[data-scheme="dark"] {
+    --waline-theme-color: #63a9ef;
+    --waline-white: #34495e;  
+    --waline-active-color: #8ab1d8;
+    --waline-light-grey: #666;
+    --waline-dark-grey: #1a85f0;  
+    --waline-badge-color: #389afc;
+    
+    --waline-text-color:rgba(76, 153, 246, 0.8)
+    --waline-bgcolor: #4dabf9;
+    --waline-bgcolor-light: #66696b;  
+    --waline-border-color: #69f0f0;
+    --waline-disable-bgcolor: #444;
+    --waline-disable-color: #574646;
+
+     
+    --waline-bq-color: #9b9c9c;  
+
+     
+    --waline-info-bgcolor: #acc6e0;
+    --waline-info-color: #9b9c9c;
+  }
+
+  .v[data-class="v"] .vcontent .vemoji {
+    width: 2.2em;  
+    margin: 0.25em;}
+
+  .v[data-class=v] .vheader {
+    border-bottom: 1px solid rgba(248, 28, 28, 0.8);   
+      }
+  .v[data-class=v] .vpanel {
+    border-radius: 12px;  
+  }
+
+
+     </style>
+
+ 
+  </footer>
+</div>
     </main>
     
 <footer class="footer">
