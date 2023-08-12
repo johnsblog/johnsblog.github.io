@@ -270,114 +270,23 @@
     <span>Life</span>
   </a>
 </nav>
+<div>
+  <div class="pagination__title">
+      <span class="pagination__title-h" style="font-size: 20px;">💬</span>
+      <hr />
+  </div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.staticfile.org/twikoo/1.4.11/twikoo.all.min.js"></script>
+  <script>
+      twikoo.init({
+          envId: "https://twikoo-mu-lac.vercel.app/",  
+          el: "#tcomment",
+          lang: 'zh-CN',
+          region: 'ap-shanghai',  
+          path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+      });
   </script>
-</body> 
-<script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
-<div id="waline"></div>
-<script>
-  new Waline({
-    el: '#waline',
-    serverURL: 'https://john-omega.vercel.app/',
-    copyright: false,
-    login: 'enable',
-    placeholder: '输入昵称 邮箱即可评论，QQ邮箱可以自动获取头像',
-    dark: 'auto',
-	  requiredMeta: ['nick', 'mail'],
-  });
-  </script>
-  
-  <style>
-  .waline-container {
-    background-color: var(1);
-    border-radius: var(5);
-    box-shadow: var(--shadow-l1);
-    padding: 1;
-  }
-  .waline-container .vcount {
-    color: var(1);
-  }
-  .v[data-class=v] .vcard {
-    flex: 9;
-    width: 0;
-    padding-bottom: 1em;
-    border-bottom: 0;  
-}
-@media (max-width: 580px){
-.v[data-class=v] .vheader .vheader-item:not(:last-child) {
-    border-bottom: 1px solid rgba(76, 153, 246, 0.8);    
-}}
-   
-  :root {
-    
-   --waline-font-size: 16px;
-
-    
-   --waline-white: #fff;
-   --waline-light-grey: #2595f1;
-   --waline-dark-grey: #1fa5ed;
-
-    
-   --waline-theme-color: #2b85c9;
-   --waline-active-color: #2ecc71;
-
-    
-   --waline-color: #1fa5ed;
-   --waline-bgcolor: #1d1e20;
-   --waline-bgcolor-light: #1d1e20;
-   --waline-bgcolor-hover: #63befa;
-   --waline-border-color: #1e81ea30;
-   --waline-disable-bgcolor: #6bdaf8;
-   --waline-disable-color: #bbb;
-   --waline-code-bgcolor: #282c34;
-
-    
-   --waline-bq-color: #f0f0f0;
-
-    
-   --waline-avatar-size: 3.25rem;
-   --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
-
-    
-   --waline-badge-color: #3498db;
-   --waline-badge-font-size: 0.775em;
-
-    
-   --waline-info-bgcolor: #f8f8f8;
-   --waline-info-color: #999;
-   --waline-info-font-size: 0.625em;
-
-    
-   --waline-border: 1px solid var(--waline-border-color);
-   --waline-avatar-radius: 50%;
-   --waline-box-shadow: none;
-  }
-
-    
-   darkmode-selector {
-    
-   --waline-white: #0f2331;
-   --waline-light-grey: #666;
-   --waline-dark-grey: #999;
-
-    
-   --waline-color: #888;
-   --waline-bgcolor: #1e1e1e;
-   --waline-bgcolor-light: #272727;
-   --waline-border-color: #333;
-   --waline-disable-bgcolor: #444;
-   --waline-disable-color: #272727;
-
-    
-   --waline-bq-color: #272727;
-
-    
-   --waline-info-bgcolor: #272727;
-   --waline-info-color: #666;
-  }
-
-
-  </style>
-
+</div>
  
   </footer>
 </div>
