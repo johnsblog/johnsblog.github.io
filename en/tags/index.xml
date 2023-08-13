@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>标签 on John&#39;s Blog</title>
+    <title>标签 on John&#39;s blog</title>
     <link>https://johnsblog.github.io/en/tags/</link>
-    <description>Recent content in 标签 on John&#39;s Blog</description>
+    <description>Recent content in 标签 on John&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 11 Aug 2023 00:23:15 +0800</lastBuildDate><atom:link href="https://johnsblog.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>life</title>
-      <link>https://johnsblog.github.io/en/tags/life/</link>
+      <title>study</title>
+      <link>https://johnsblog.github.io/en/tags/study/</link>
       <pubDate>Fri, 11 Aug 2023 00:23:15 +0800</pubDate>
       
+      <guid>https://johnsblog.github.io/en/tags/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://johnsblog.github.io/en/tags/life/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://johnsblog.github.io/en/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://johnsblog.github.io/en/tags/blog/</link>
-      <pubDate>Thu, 05 May 2022 00:18:23 +0800</pubDate>
-      
-      <guid>https://johnsblog.github.io/en/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>read</title>
-      <link>https://johnsblog.github.io/en/tags/read/</link>
-      <pubDate>Thu, 05 May 2022 00:18:06 +0800</pubDate>
-      
-      <guid>https://johnsblog.github.io/en/tags/read/</guid>
       <description></description>
     </item>
     
