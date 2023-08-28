@@ -21,10 +21,9 @@ cover:
 ---
 
 
-# 
 
-```objectivec
 
+```
 class Me:
     def __init__(self):
         self.name = "John Young"

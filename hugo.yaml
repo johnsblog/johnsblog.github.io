@@ -39,17 +39,14 @@ languages:
         enabled: true
         title: John
         subtitle: "hello，motherfucker"
-        imageUrl: "img/A.gif" #图片放在static/img/A.gif
+        imageUrl: "img/C.gif" #图片放在static/img/A.gif
         imageTitle: 
         imageWidth: 150
         imageHeight: 150
         buttons:
           - name:  博客
             url: posts/blog
-          - name:  在看
-            url: posts/watch
-          - name:  在读
-            url: posts/read
+
           - name:  生活
             url: posts/life
       menu:
@@ -123,7 +120,7 @@ params:
         - name: QQ
           url: "img/qq.jpg"
         - name: WeChat
-          url: "img/wechat.png"
+          url: "img/A.gif"
         - name: email
           url: "mailto:1055072909@qq.com"
 
@@ -136,7 +133,7 @@ params:
     label:
       text: "Home"
       #icon: "img/Q.gif"
-      icon: "img/A.gif"
+      icon: "img/B.gif"
       iconHeight: 35
 
     # analytics:  #谷歌分析
@@ -144,11 +141,11 @@ params:
     #         SiteVerificationTag: "XYZabc"
 
     assets:
-        favicon: "img/A.gif"
-        favicon16x16: "img/A.gif"
-        favicon32x32: "img/A.gif"
-        apple_touch_icon: "A.gif"
-        safari_pinned_tab: "A.gif"
+        favicon: "img/C.gif"
+        favicon16x16: "img/C.gif"
+        favicon32x32: "img/C.gif"
+        apple_touch_icon: "C.gif"
+        safari_pinned_tab: "C.gif"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
