@@ -2,18 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnsblog.github.io/en/posts/blog/8.29/</loc>
+    <lastmod>2023-08-29T09:13:26+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/</loc>
+    <lastmod>2023-08-29T09:13:26+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/posts/blog/</loc>
+    <lastmod>2023-08-29T09:13:26+08:00</lastmod>
+  </url><url>
+    <loc>https://johnsblog.github.io/en/posts/</loc>
+    <lastmod>2023-08-29T09:13:26+08:00</lastmod>
+  </url><url>
     <loc>https://johnsblog.github.io/en/about/</loc>
     <lastmod>2021-11-06T14:57:28+08:00</lastmod>
   </url><url>
     <loc>https://johnsblog.github.io/en/categories/</loc>
   </url><url>
-    <loc>https://johnsblog.github.io/en/</loc>
-  </url><url>
     <loc>https://johnsblog.github.io/en/series/</loc>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/posts/blog/</loc>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/posts/</loc>
   </url><url>
     <loc>https://johnsblog.github.io/en/search/</loc>
   </url><url>
