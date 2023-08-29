@@ -2,9 +2,7 @@
 name: douban
 on: 
   schedule:
-  - cron: "0 0,0,12,23 * * *"
-  watch:
-    types: [started]
+  - cron: "30 * * * *"
 
 jobs:
   douban:
@@ -12,42 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: movie
-      uses: johnsblog/doumark-action@master
+      uses: johnsblog/doumark-action.git
       with:
-        id: John
+        id: lizheming
         type: movie
         format: csv
-        dir: data/douban
+        dir: ./data/douban
 
-    - name: movie2neodb
-      uses: johnsblog/doumark-action@master
+    - name: music
+      uses: johnsblog/doumark-action.git
       with:
-        id: John
-        type: movie
-        format: neodb
-       
-        
-    - name: book
-      uses: jjohnsblog/doumark-action@master
-      with:
-        id: John
-        type: book
+        id: lizheming
+        type: music
         format: csv
         dir: ./data/douban
   
-    - name: book2neodb
-      uses: johnsblog/doumark-action@master
-      with:
-        id: John
-        type: book
-        format: neodb
-        
-        
     - name: Commit
-      uses: EndBug/add-and-commit@v9
+      uses: EndBug/add-and-commit@v8
       with:
         message: 'chore: update douban data'
         add: './data/douban'
