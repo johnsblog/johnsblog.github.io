@@ -20,7 +20,7 @@ jobs:
         id: John
         type: movie
         format: csv
-        dir: ./data/douban
+        dir: data/douban
 
     - name: movie2neodb
       uses: johnsblog/doumark-action@master
