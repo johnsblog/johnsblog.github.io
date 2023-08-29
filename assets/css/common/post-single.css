@@ -170,8 +170,10 @@
 }
 
 .post-content .highlight pre {
-    margin: 0;
+    background-color: var(--theme) !important;
+    margin:0;
 }
+
 
 .post-content .highlighttable {
     table-layout: fixed;
@@ -203,12 +205,13 @@
     display: block;
     margin: auto 0;
     padding: 10px;
-    color: rgb(213, 213, 214);
-    background: var(--hljs-bg) !important;
-    border-radius: var(--radius);
+    /* 主要代码颜色 */
+    color: #abb2bf;
+    font-weight: 200;
     overflow-x: auto;
     word-break: break-all;
 }
+
 
 .post-content blockquote {
     margin: 20px 0;

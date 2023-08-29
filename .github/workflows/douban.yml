@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: movie
-      uses: johnsblog/johnsblog.github.io
+      uses: johnsblog/doumark-action@master
       with:
         id: John
         type: movie
@@ -23,7 +23,7 @@ jobs:
         dir: ./data/douban
 
     - name: movie2neodb
-      uses: johnsblog/johnsblog.github.io
+      uses: johnsblog/doumark-action@master
       with:
         id: John
         type: movie
@@ -31,7 +31,7 @@ jobs:
        
         
     - name: book
-      uses: johnsblog/johnsblog.github.io
+      uses: jjohnsblog/doumark-action@master
       with:
         id: John
         type: book
@@ -39,7 +39,7 @@ jobs:
         dir: ./data/douban
   
     - name: book2neodb
-      uses: johnsblog/johnsblog.github.io
+      uses: johnsblog/doumark-action@master
       with:
         id: John
         type: book

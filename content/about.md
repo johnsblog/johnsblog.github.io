@@ -20,9 +20,6 @@ cover:
     relative: false
 ---
 
-
-
-
 ```
 class Me:
     def __init__(self):

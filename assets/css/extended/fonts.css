@@ -1,6 +1,12 @@
-@font-face {
-	font-family: 'Code New Roman';
-	src: url('CodeNewRoman.woff2') format('woff2'), url('CodeNewRoman.woff2') format('woff2');
-	font-weight: 400;
-	font-style: normal;
+body {
+    font-family: 'Code New Roman', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
 }
+@media (max-width: 767px) {
+    /* 手机端字体样式 */
+    body {
+       font-family: "CodeNewRoman", sans-serif;
+    }
+ }

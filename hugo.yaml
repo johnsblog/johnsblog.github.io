@@ -115,9 +115,9 @@ params:
         - name: twitter
           url:  "img/twitter.png"
         - name: QQ
-          url: "img/qq.jpg"
+          url: "https://s2.loli.net/2023/08/29/5kahKNDAmGiLd8X.jpg"
         - name: WeChat
-          url: "img/A.gif"
+          url: "https://s2.loli.net/2023/08/29/mDSIbt65RUiXLTv.png"
         - name: email
           url: "mailto:1055072909@qq.com"
 

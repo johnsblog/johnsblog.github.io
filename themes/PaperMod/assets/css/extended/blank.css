@@ -46,11 +46,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 /* 行文风格 */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-family: 'Code New Roman', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;
 }
+
 .post-content {
     padding-top: 1rem;
 }

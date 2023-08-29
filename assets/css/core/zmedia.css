@@ -47,3 +47,9 @@
         transform: none;
     }
 }
+@media (max-width: 767px) {
+    /* 手机端字体样式 */
+    body {
+       font-family: "CodeNewRoman", sans-serif;
+    }
+ }
