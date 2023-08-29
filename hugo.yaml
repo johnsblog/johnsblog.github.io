@@ -38,7 +38,7 @@ languages:
       profileMode:
         enabled: true
         title: John
-        subtitle: "hello，motherfucker"
+        subtitle: "And then I go and spoil it all By saying somethin'stupid Like.."
         imageUrl: "img/C.gif" #图片放在static/img/A.gif
         imageTitle: 
         imageWidth: 150
@@ -49,16 +49,16 @@ languages:
 
           - name:  生活
             url: posts/life
+
+          - name:  留言
+            url: about
       menu:
         main:
           - identifier: home
             name: 主页
             url: /
             weight: 2
-          - identifier: posts
-            name: 文章
-            url: posts
-            weight: 3
+       
           - identifier: archives
             name: 时间轴
             url: archives/
@@ -71,10 +71,7 @@ languages:
             name: 搜索
             url: search
             weight: 50
-          - identifier: about
-            name: 关于&留言
-            url: about
-            weight: 50
+          
         
 
 outputs:
