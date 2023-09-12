@@ -42,7 +42,7 @@ jobs:
         curl -X 'GET' \
         'https://neodb.social/api/me/shelf/complete?category=movie&page=1' \
         -H 'accept: application/json' \
-        -H 'Authorization: Bearer ${{ secrets.NEODB_ACCESS_TOKEN }}' > movie1.json
+        -H 'Authorization: Bearer ${{ okpLsJbQiKjqgf9xNZSJzIW6fRZlej }}' > movie1.json
 
         # 获取 NeoDB 上电影的标记数
         MOVIE_COUNT() {
@@ -53,7 +53,7 @@ jobs:
         curl -X 'GET' \
         'https://neodb.social/api/me/shelf/complete?category=tv&page=1' \
         -H 'accept: application/json' \
-        -H 'Authorization: Bearer ${{ secrets.NEODB_ACCESS_TOKEN }}' > tv1.json
+        -H 'Authorization: Bearer ${{ okpLsJbQiKjqgf9xNZSJzIW6fRZlej }}' > tv1.json
 
         # 获取 NeoDB 上电视剧的标记数
         TV_COUNT() {
@@ -93,7 +93,7 @@ jobs:
         # 下载文件并保存为对应的文件名
         curl -X 'GET' "$url" \
           -H 'accept: application/json' \
-          -H 'Authorization: Bearer ${{ secrets.NEODB_ACCESS_TOKEN }}' > "$filename"
+          -H 'Authorization: Bearer ${{ okpLsJbQiKjqgf9xNZSJzIW6fRZlej }}' > "$filename"
         done
 
         # 下载 TV 分类
@@ -103,7 +103,7 @@ jobs:
 
           curl -X 'GET' "$tv_url" \
             -H 'accept: application/json' \
-            -H 'Authorization: Bearer ${{ secrets.NEODB_ACCESS_TOKEN }}' > "$tv_filename"
+            -H 'Authorization: Bearer ${{ okpLsJbQiKjqgf9xNZSJzIW6fRZlej }}' > "$tv_filename"
           done
 
         # 把所有数据合并成一个文件
