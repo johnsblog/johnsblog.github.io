@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: movie
-      uses: johnsblog/johnsblog.github.io@main
+      uses: lizheming/doumark-action@master
       with:
         id: ul181457333-1
         type: movie
@@ -24,7 +24,7 @@ jobs:
         dir: ./data/douban    
 
     - name: book
-      uses: johnsblog/johnsblog.github.io@main
+      uses: lizheming/doumark-action@master
       with:
         id: ul181457333-1
         type: book
