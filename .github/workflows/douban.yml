@@ -3,7 +3,7 @@ name: douban
 on:
   push:
     branches:
-      - master   //当master分支更新时执行
+      - main
   watch:
     types: [started]
 
