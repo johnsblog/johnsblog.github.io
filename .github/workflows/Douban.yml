@@ -1,15 +1,8 @@
 # .github/workflows/douban.yml
 name: douban
-<<<<<<< HEAD
-on:
-  push:
-    branches:
-      - main
-=======
 on: 
   schedule:
   - cron: "0 0,0,12,23 * * *"
->>>>>>> 6ccbe5511414f7f0bedff82b4dc0006c43c51401
   watch:
     types: [started]
 
@@ -58,10 +51,3 @@ jobs:
       with:
         message: 'chore: update douban data'
         add: './data/douban'
-        dir: ./data/douban  
-        
-    - name: Commit
-      uses: EndBug/add-and-commit@v8
-      with:
-        message: 'chore: update douban data'
-        add: './data/douban'    
