@@ -1,10 +1,92 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>标签🏷️ on John&#39;s blog</title>
+    <title>标签 on John&#39;s blog</title>
     <link>https://johnsblog.github.io/en/tags/</link>
-    <description>Recent content in 标签🏷️ on John&#39;s blog</description>
+    <description>Recent content in 标签 on John&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://johnsblog.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Sep 2023 17:08:26 +0800</lastBuildDate><atom:link href="https://johnsblog.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>积累</title>
+      <link>https://johnsblog.github.io/en/tags/%E7%A7%AF%E7%B4%AF/</link>
+      <pubDate>Tue, 19 Sep 2023 17:08:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E7%A7%AF%E7%B4%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>专题</title>
+      <link>https://johnsblog.github.io/en/tags/%E4%B8%93%E9%A2%98/</link>
+      <pubDate>Tue, 19 Sep 2023 16:48:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E4%B8%93%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>短视频</title>
+      <link>https://johnsblog.github.io/en/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Tue, 19 Sep 2023 16:48:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>媒介与技术</title>
+      <link>https://johnsblog.github.io/en/tags/%E5%AA%92%E4%BB%8B%E4%B8%8E%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 03 Sep 2023 16:42:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E5%AA%92%E4%BB%8B%E4%B8%8E%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>建设性新闻</title>
+      <link>https://johnsblog.github.io/en/tags/%E5%BB%BA%E8%AE%BE%E6%80%A7%E6%96%B0%E9%97%BB/</link>
+      <pubDate>Sun, 03 Sep 2023 16:42:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E5%BB%BA%E8%AE%BE%E6%80%A7%E6%96%B0%E9%97%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>舆论</title>
+      <link>https://johnsblog.github.io/en/tags/%E8%88%86%E8%AE%BA/</link>
+      <pubDate>Sun, 03 Sep 2023 16:42:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E8%88%86%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>纪念</title>
+      <link>https://johnsblog.github.io/en/tags/%E7%BA%AA%E5%BF%B5/</link>
+      <pubDate>Tue, 29 Aug 2023 09:13:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E7%BA%AA%E5%BF%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>后真相</title>
+      <link>https://johnsblog.github.io/en/tags/%E5%90%8E%E7%9C%9F%E7%9B%B8/</link>
+      <pubDate>Mon, 21 Aug 2023 16:42:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E5%90%8E%E7%9C%9F%E7%9B%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学派</title>
+      <link>https://johnsblog.github.io/en/tags/%E5%AD%A6%E6%B4%BE/</link>
+      <pubDate>Mon, 21 Aug 2023 16:42:26 +0800</pubDate>
+      
+      <guid>https://johnsblog.github.io/en/tags/%E5%AD%A6%E6%B4%BE/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>笔记 | John&#39;s blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="笔记 - John&#39;s blog">
+<meta name="author" content="">
+<link rel="canonical" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.873837ddfdd2c624a053e77015cc696f3fc6d6dfc16ce1069dc2da0267ca7f13.css" integrity="sha256-hzg33f3SxiSgU&#43;dwFcxpbz/G1t/BbOEGncLaAmfKfxM=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://johnsblog.github.io/img/C.gif">
+<link rel="icon" type="image/png" sizes="16x16" href="https://johnsblog.github.io/img/C.gif">
+<link rel="icon" type="image/png" sizes="32x32" href="https://johnsblog.github.io/img/C.gif">
+<link rel="apple-touch-icon" href="https://johnsblog.github.io/C.gif">
+<link rel="mask-icon" href="https://johnsblog.github.io/C.gif">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<link href="https://fonts.cdnfonts.com/css/code-new-roman" rel="stylesheet">
+<script async src="https://analytics.umami.is/script.js" data-website-id="6795932d-68db-48f1-84ab-0a27dca47f70"></script><style>
+    @import url('/static/fonts/code-new-roman.ttf');
+</style><meta property="og:title" content="笔记" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="笔记"/>
+<meta name="twitter:description" content=""/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "博客 📒",
+      "item": "https://johnsblog.github.io/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://johnsblog.github.io/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "笔记",
+      "item": "https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://johnsblog.github.io/en/" accesskey="h" title="Home (Alt + H)">
+                <img src="https://johnsblog.github.io/img/B.gif" alt="" aria-label="logo"
+                    height="35">Home</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://johnsblog.github.io/en/" title="主页">
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johnsblog.github.io/en/archives/" title="时间轴">
+                    <span>时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johnsblog.github.io/en/search" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://johnsblog.github.io/en/tags" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://johnsblog.github.io/en/">Home</a>&nbsp;»&nbsp;<a href="https://johnsblog.github.io/en/posts/">博客 📒</a>&nbsp;»&nbsp;<a href="https://johnsblog.github.io/en/posts/blog/"></a></div>
+  <h1>
+    笔记
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>名言
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>我们正在成为一个娱乐至死的物种，所有行业都成为了娱乐的附庸，并最终走向毁灭。（泛娱乐化） 尼尔·波兹曼 唯一稀缺的资源就是人类的注意力。（眼球经...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-19 17:08:26 +0800 CST'>2023-09-19</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to 名言" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E5%90%8D%E8%A8%80/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>MCN
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、MCN介绍 （⼀）短视频MCN概念界定 ​ ​ MCN的全称为Multi-Channel Network，可直译为“多频道⽹络”，最早发源于国外短...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-19 16:48:26 +0800 CST'>2023-09-19</span>&nbsp;·&nbsp;12 min</footer>
+  <a class="entry-link" aria-label="post link to MCN" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/mcn/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>广播电视概论
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>蒙太奇 在各类影视摄制中，将全片所要表现内容分解为不同的段落、场面、镜头，分别进行处理和拍摄。再根据原定的摄制构思，运用各种技巧，将这些镜头、...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-19 16:42:26 +0800 CST'>2023-09-19</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to 广播电视概论" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E5%B9%BF%E6%92%AD%E7%94%B5%E8%A7%86%E6%A6%82%E8%AE%BA/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>媒介素养
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1、什么是媒介素养 媒介素养就是指⼈⾯对媒体各种信息时的选择能⼒、理解能⼒、质疑能⼒、评估能⼒、创造和⽣产能⼒以及思辨的反应能⼒。 中国⼈⺠⼤学...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-03 16:42:26 +0800 CST'>2023-09-03</span>&nbsp;·&nbsp;7 min</footer>
+  <a class="entry-link" aria-label="post link to 媒介素养" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E5%AA%92%E4%BB%8B%E7%B4%A0%E5%85%BB/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>建设性新闻
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、建设性新闻的概念 建设性新闻（Constructive Journalism）起源于西方新闻界，是一种广泛应用于实践和研究的新闻思想与报道方...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-03 16:42:26 +0800 CST'>2023-09-03</span>&nbsp;·&nbsp;8 min</footer>
+  <a class="entry-link" aria-label="post link to 建设性新闻" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E5%BB%BA%E8%AE%BE%E6%80%A7%E6%96%B0%E9%97%BB/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>传播学三大学派
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>经验学派 指主要以经验性⽅法来考察社会现象的社会科学流派 美国学者为代表，主张从经验事实出发。实证主义研究⽅法、功能取向的学术⽴场、实⽤主义研究...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-21 16:42:26 +0800 CST'>2023-08-21</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to 传播学三大学派" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E4%BC%A0%E6%92%AD%E5%AD%A6%E4%B8%89%E5%AD%A6%E6%B4%BE/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>后真相
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>后真相定义、特征、原因 《⽜津英语词典》对“后真相”的定义：“诉诸情感及个⼈信念，较陈述客观事实更能影响舆论的情况。” 在社交媒体时代，“后真相...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-21 16:42:26 +0800 CST'>2023-08-21</span>&nbsp;·&nbsp;5 min</footer>
+  <a class="entry-link" aria-label="post link to 后真相" href="https://johnsblog.github.io/en/posts/blog/%E7%AC%94%E8%AE%B0/%E5%90%8E%E7%9C%9F%E7%9B%B8/"></a>
+</article>
+</main>
+
+     
+         
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+              
+     
+    
+     
+               
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://johnsblog.github.io/en/">John&#39;s blog</a></span>
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+         
+         
+         
+         
+        </br>共 17759 字  写完一本 埃克苏佩里 的</br>《小王子》了！    
+        
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
