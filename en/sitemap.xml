@@ -84,6 +84,8 @@
   </url><url>
     <loc>https://johnsblog.github.io/en/series/</loc>
   </url><url>
+    <loc>https://johnsblog.github.io/en/posts/life/todo/</loc>
+  </url><url>
     <loc>https://johnsblog.github.io/en/search/</loc>
   </url><url>
     <loc>https://johnsblog.github.io/en/posts/blog/%E6%96%87%E7%AB%A0%E6%94%B6%E5%BD%95/</loc>
@@ -91,7 +93,5 @@
     <loc>https://johnsblog.github.io/en/archives/</loc>
   </url><url>
     <loc>https://johnsblog.github.io/en/posts/life/</loc>
-  </url><url>
-    <loc>https://johnsblog.github.io/en/posts/life/%E6%9C%80%E8%BF%91%E5%9C%A8%E7%9C%8B/</loc>
   </url>
 </urlset>
